@@ -473,6 +473,10 @@ export class AutocompleteComponent implements OnInit, OnChanges, AfterViewInit, 
     this.closed.emit();
   }
 
+  handleBlur(e) {
+    this.handleClose();
+  }
+
   handleFocus(e) {
     this.searchInput.nativeElement.focus();
     if (this.isFocused) {
